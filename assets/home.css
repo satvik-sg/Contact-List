@@ -1,0 +1,34 @@
+.bl{
+    color:white;
+    border: 2px white solid;
+    border-radius: 30%;
+}
+body{
+    background: rgb(17, 24, 65);
+    text-align: center;
+}
+.bl:hover{
+    background: rgb(26, 78, 112);
+}
+.pre{
+    display: block;
+}
+#list{
+    justify-content: space-between;
+}
+.fa-times-circle{
+    color: yellowgreen;
+}
+.fa-times-circle:hover{
+    color: red;
+}
+.fa-pen{
+    color: yellowgreen;
+}
+.fa-pen:hover{
+    color:green;
+}
+#buttons{
+    margin-left: 48%;
+    display: inline;
+}

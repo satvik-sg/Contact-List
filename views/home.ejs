@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title%>
+        </title>
+        <script src="https://kit.fontawesome.com/03c027b17f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="home.css">
+    </head>
+    <body>
+        <div class="pre">
+        <img src="iconfinder_book-note-paper-school_2824439.png" height=40 width=30>
+        <h1 style="text-align: center; color: chocolate;">My Contacts List</h1>
+        </div>
+        <div>
+            <hr size="7">
+        </div>
+        <div id="list">
+            <ul>
+                   
+                <% for (let i of contact_list) { %> 
+                    
+                    <li class="bl">
+                        <div class="pre">
+                        <p><%= i.name %></p>
+                        <p><%= i.phone %></p>
+                        </div>
+                        <div id="buttons">
+                        <div class="delete-button">
+                            <a href="/delete-contact/?id=<%= i.id %>">
+                                <i class="far fa-times-circle"></i>
+                            </a>
+                        </div>
+                        <br>
+                        <div class="update-button">
+                            <a href="/update-contact-form/?id=<%= i.id %>">
+                                <i class="fas fa-pen"></i></i>
+                            </a>
+                        </div>
+                    </div>
+                    </li>
+                    
+                <% } %>
+            </ul>
+        </div>
+
+        <form action="/create-contact" method="POST">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="number" name="phone" placeholder="Enter phone" required>
+            <button type="submit">Add contact</button>
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title%>
+        </title>
+        <link rel="stylesheet" type="text/css" href="updateform.css">
+    </head>
+<body>
+    <div>
+        <p>
+            Enter Details to Update
+        </p>
+    </div>
+    <br><br>
+    <form action="/update-contact/?id=<%= locals.id %>" method="POST">
+    <input type="text" name="name" placeholder="Enter name" required>
+    <input type="number" name="phone" placeholder="Enter phone" required>
+    <button type="submit">Update contact</button>
+    </form>
+</body>
+</html>
